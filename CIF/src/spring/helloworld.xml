@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+<bean id = "helloWorldSample"
+    class="class10.HelloWorld">
+    <!-- depends-on = "ReallyHelloWorld" -->
+    <property name="myString"><value>First Hello World</value></property>
+    <property name="reallyHelloWorld">
+        <ref bean="ReallyHelloWorld"/></property>
+</bean>
+
+
+<bean id = "ReallyHelloWorld"
+  class =  "class10.HelloWorld">
+  <property name="myString"><value>Really Hello World</value></property>
+
+    <property name="reallyHelloWorld">
+        <ref bean="ReallyHelloWorld2"/></property>
+</bean>
+
+    <bean id = "ReallyHelloWorld2"
+          class =  "class10.HelloWorld">
+        <property name="myString"><value>CIF</value></property>
+
+    </bean>
+
+</beans> 

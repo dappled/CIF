@@ -1,0 +1,20 @@
+Hi:
+
+This is my homework1-DESIGN_PATTERNS. It contains 6 files:
+1. Trade: this defines the trade class
+2. TradeIterator: this is the trade iterator. Note that when the iterator iterates through an inappropriate line(like incorrect format), it just warn an error and continue rather than stop.
+3. Subject: this is the subject class.
+4. AverageObserver: this is the observer class which prints average price of all the trades seen thus far.
+5. CurrentObserver: this is the observer class which prints the current trade
+6. SubjectExample: this is the main that instantiate a subject and the two listeners and than call run.
+
+To call the main in SubjectExample, do:
+mkdir -p ./src/design_patterns
+mv *.java ./src/design_patterns
+javac ./src/design_patterns/*.java
+java -cp ./src design_patterns.SubjectExample fileLocation
+
+Thank you for your help.
+
+Best,
+Zhenghong Dong
