@@ -4,7 +4,7 @@
 <beans>
 
 <bean id = "helloWorldSample"
-    class="class10.HelloWorld">
+    class="spring.HelloWorld">
     <!-- depends-on = "ReallyHelloWorld" -->
     <property name="myString"><value>First Hello World</value></property>
     <property name="reallyHelloWorld">
@@ -13,7 +13,7 @@
 
 
 <bean id = "ReallyHelloWorld"
-  class =  "class10.HelloWorld">
+  class =  "spring.HelloWorld">
   <property name="myString"><value>Really Hello World</value></property>
 
     <property name="reallyHelloWorld">
@@ -21,7 +21,7 @@
 </bean>
 
     <bean id = "ReallyHelloWorld2"
-          class =  "class10.HelloWorld">
+          class =  "spring.HelloWorld">
         <property name="myString"><value>CIF</value></property>
 
     </bean>

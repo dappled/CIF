@@ -103,8 +103,7 @@ public class Server implements MessageListener {
 	/** helper function of publishQuest, do the real monte carlo stuff */
 	private double getPrice(final OptionType type, final double currentPrice, final double dailyVol,
 			final double dailyRate, final int TTM, final double strike, final double err,
-			final double stoppingCriteria,
-			final int maxSimulation) throws Exception {
+			final double stoppingCriteria, final int maxSimulation) throws Exception {
 		// create path stats monitor
 		_stat = PathStat.newPathStat();
 

@@ -24,7 +24,7 @@ public class HelloWorldExample {
         h3.setReallyHelloWorld(h2);
         h3.printMe();
         */
-      XmlBeanFactory factory = new XmlBeanFactory(new FileSystemResource("helloworld.xml"));
+      XmlBeanFactory factory = new XmlBeanFactory(new FileSystemResource("src/spring/helloworld.xml"));
       IHelloWorld helloWorld = (IHelloWorld) factory.getBean("helloWorldSample");
       helloWorld.printMe();
 

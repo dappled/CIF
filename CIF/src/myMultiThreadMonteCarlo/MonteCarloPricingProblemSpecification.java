@@ -3,6 +3,7 @@ package myMultiThreadMonteCarlo;
 import myMonteCarlo.DataWrapper.OptionType;
 
 /**
+ * An implementation of {@link I_PricingProblemSpecification}, specifying a Monte Carlo simulation problem.
  * @author Zhenghong Dong
  */
 public class MonteCarloPricingProblemSpecification implements I_PricingProblemSpecification {
@@ -13,6 +14,9 @@ public class MonteCarloPricingProblemSpecification implements I_PricingProblemSp
 	private final int			_ttm;
 	private final double		_strike;
 
+	/***********************************************************************
+	 * Constructor
+	 ***********************************************************************/
 	public MonteCarloPricingProblemSpecification(final OptionType type, final double currentPrice,
 			final double dailyVol, final double dailyRate, final int TTM, final double strike) {
 		_type = type;
@@ -23,6 +27,9 @@ public class MonteCarloPricingProblemSpecification implements I_PricingProblemSp
 		_strike = strike;
 	}
 
+	/***********************************************************************
+	 * Getter and Setter
+	 ***********************************************************************/
 	@Override
 	public double getCurrentPrice() {
 		return _currentPrice;
