@@ -23,6 +23,9 @@ public class MonteCarloSimulationProblem implements Runnable {
 	private final OptionType					_type;
 	private final I_SolutionCollector<Double>	_collector;
 
+	
+	
+	
 	/***********************************************************************
 	 * Constructor
 	 ***********************************************************************/

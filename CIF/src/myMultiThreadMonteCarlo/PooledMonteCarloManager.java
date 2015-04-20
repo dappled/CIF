@@ -65,7 +65,7 @@ public class PooledMonteCarloManager {
 		// Offer task at most three times while there are free workers, note that we always offer a problem even all
 		// workers are busy (then this problem will stay in the queue waiting for someone to be free to pick it up),
 		// otherwise if there are more free workers we will assign up to three of them on this problem (so they will
-		// coorporate to solve this problem together).
+		// corporate to solve this problem together).
 		do {
 			_taskQueue.offer( problem );
 			// wait for context switch, so free workers have chance to pick up this problem and then queue will be empty
@@ -73,8 +73,8 @@ public class PooledMonteCarloManager {
 			this.wait( 1 );
 		} while (++ret < 3 && _taskQueue.size() == 0);
 		// If there are less than 3 workers in the queue, we will first assign this problems to the remaining one or two
-		// free workers (they will coorporate to solve this problem together), then the above loop will offer the same
-		// problem one extra time before leaving the loop. That extra time is redundent and should be removed.
+		// free workers (they will corporate to solve this problem together), then the above loop will offer the same
+		// problem one extra time before leaving the loop. That extra time is redundant and should be removed.
 		if (ret > 1 && _taskQueue.size() != 0) {
 			_taskQueue.remove( problem );
 		}
